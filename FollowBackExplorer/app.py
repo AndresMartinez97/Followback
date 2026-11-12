@@ -225,16 +225,6 @@ def _show_metrics(summary: dict[str, int]) -> None:
 def main() -> None:
     if CSS_PATH.is_file():
         st.markdown(f"<style>{CSS_PATH.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
-    st.markdown(
-        """
-        <style>
-            #MainMenu {
-                visibility: hidden;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
 
     with st.sidebar:
         st.markdown("## 📸 FollowBack Explorer")
@@ -249,7 +239,7 @@ def main() -> None:
     st.markdown(
         '<div class="hero"><span class="eyebrow">TU CÍRCULO, MÁS CLARO</span>'
         "<h1>FollowBack Explorer</h1>"
-        "<p>Importa tus exportaciones.. de Instagram y explora tus relaciones de seguimiento.</p></div>",
+        "<p>Importa tus exportaciones de Instagram y explora tus relaciones de seguimiento.</p></div>",
         unsafe_allow_html=True,
     )
 
