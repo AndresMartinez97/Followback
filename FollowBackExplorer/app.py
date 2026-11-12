@@ -249,7 +249,7 @@ def main() -> None:
     st.markdown(
         '<div class="hero"><span class="eyebrow">TU CÍRCULO, MÁS CLARO</span>'
         "<h1>FollowBack Explorer</h1>"
-        "<p>Importa tus exportaciones de Instagram y explora tus relaciones de seguimiento.</p></div>",
+        "<p>Importa tus exportaciones.. de Instagram y explora tus relaciones de seguimiento.</p></div>",
         unsafe_allow_html=True,
     )
 
