@@ -225,6 +225,16 @@ def _show_metrics(summary: dict[str, int]) -> None:
 def main() -> None:
     if CSS_PATH.is_file():
         st.markdown(f"<style>{CSS_PATH.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
+    st.markdown(
+        """
+        <style>
+            #MainMenu {
+                visibility: hidden;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
     with st.sidebar:
         st.markdown("## 📸 FollowBack Explorer")
