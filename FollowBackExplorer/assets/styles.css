@@ -1,0 +1,177 @@
+:root {
+  --ink: #f5f2f7;
+  --muted: #aaa2b2;
+  --pink: #e83e8c;
+  --purple: #a855d1;
+  --orange: #ff9552;
+  --surface: #17171d;
+  --surface-raised: #1d1b23;
+  --line: rgba(255, 255, 255, 0.09);
+}
+
+.stApp {
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 2% 2%, rgba(255, 121, 61, 0.09), transparent 28rem),
+    radial-gradient(ellipse at 98% 0%, rgba(210, 45, 130, 0.1), transparent 32rem),
+    #0b0b0f;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+[data-testid="stHeader"] {
+  background: rgba(11, 11, 15, 0.82);
+}
+
+h1, h2, h3 {
+  color: var(--ink);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: -0.035em;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0.4rem 0 1.4rem;
+  padding: clamp(1.6rem, 4vw, 2.8rem);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  color: white;
+  background: linear-gradient(118deg, #51277b 0%, #92265e 55%, #a6502a 100%);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.3);
+}
+
+.hero::after {
+  position: absolute;
+  top: -8rem;
+  right: -3rem;
+  width: 23rem;
+  height: 23rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  content: '';
+  box-shadow: 0 0 0 32px rgba(255,255,255,0.06), 0 0 0 68px rgba(255,255,255,0.04);
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0.25rem 0;
+  color: white;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero p, .hero .eyebrow {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero p {
+  max-width: 42rem;
+  margin-bottom: 0;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+[data-testid="stMetric"] {
+  height: 100%;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #1d1b23, #15151a);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.2);
+}
+
+[data-testid="stMetricLabel"] {
+  color: var(--muted);
+}
+
+[data-testid="stMetricValue"] {
+  color: #e58ac2;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+[data-testid="stSidebar"] {
+  border-right: 1px solid var(--line);
+  background: #101014;
+}
+
+[data-testid="stDataFrame"], [data-testid="stPlotlyChart"] {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.16);
+}
+
+[data-testid="stVerticalBlockBorderWrapper"].st-key-followers-upload-card,
+[data-testid="stVerticalBlockBorderWrapper"].st-key-following-upload-card {
+  min-height: 12rem;
+  border-color: var(--line);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #1d1b23, #15151a);
+}
+
+.st-key-followers-upload-card {
+  border-top: 2px solid rgba(232, 62, 140, 0.75);
+}
+
+.st-key-following-upload-card {
+  border-top: 2px solid rgba(168, 85, 209, 0.75);
+}
+
+[data-testid="stTextInput"] input,
+[data-testid="stDateInput"] input,
+[data-testid="stSelectbox"] [data-baseweb="select"] > div,
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div {
+  border-color: var(--line);
+  background-color: var(--surface-raised);
+}
+
+[data-testid="stButton"] button {
+  border: 1px solid rgba(232, 62, 140, 0.32);
+  border-radius: 12px;
+  background: linear-gradient(110deg, #55276f, #8b285e);
+  color: #fff;
+}
+
+[data-testid="stButton"] button:hover {
+  border-color: rgba(255, 149, 82, 0.7);
+  color: #fff;
+}
+
+a {
+  color: #e58ac2;
+}
+
+.sidebar-footer {
+  position: fixed;
+  z-index: 100;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  width: min(18rem, calc(100vw - 3rem));
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.82rem;
+}
+
+.sidebar-footer a {
+  color: #a49aaa;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.sidebar-footer a:hover {
+  color: #e58ac2;
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    border-radius: 20px;
+  }
+}
